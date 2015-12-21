@@ -1,4 +1,10 @@
 <?php
+
+// Raid Monitor Module
+// This lib is released as-is - No Warranty at all
+// Author: Giuseppe Del Duca
+// Date: 2015-12-21
+
 require '../autoload.php';
 $Config = new Config();
 
@@ -8,7 +14,7 @@ $datas = array();
 if (!(exec('cat /proc/mdstat | grep -A1 "^md" | grep -v "\-\-"', $df)))
 {
     $datas[] = array(
-        'name'   => 'N.A',
+        'name'   	=> 'N.A',
         'phisical'  => 'N.A',
         'type'      => 'N.A',
         'status'	=> 'N.A',
